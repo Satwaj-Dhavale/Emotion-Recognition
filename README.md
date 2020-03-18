@@ -22,3 +22,6 @@ The requirements are provided in the Requirements.txt file.
 # Examples
 
 ![alt text](https://github.com/Satwaj-Dhavale/Emotion-Recognition/blob/master/static/output_files/images/6022088b4c0d35db.jpg)
+
+
+![alt_text](https://github.com/Satwaj-Dhavale/Emotion-Recognition/blob/master/static/output_files/images/9b5714d33695bd73.jpg)
