@@ -1,12 +1,15 @@
-import tensorflow as tf
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, AveragePooling2D, Flatten, Dense, Dropout, BatchNormalization
-from tensorflow.keras.regularizers import l1, l2, l1_l2
+# import tensorflow as tf
+import keras
+from keras.layers import Conv2D, MaxPooling2D, AveragePooling2D, Flatten, Dense, Dropout, BatchNormalization
+from keras.regularizers import l1, l2, l1_l2
+# from tensorflow.keras.layers import Conv2D, MaxPooling2D, AveragePooling2D, Flatten, Dense, Dropout, BatchNormalization
+# from tensorflow.keras.regularizers import l1, l2, l1_l2
 
 
 def cnn_model_4():
     classes = 7
     input_shape = (48, 48, 1)
-    m1 = tf.keras.models.Sequential([
+    m1 = keras.models.Sequential([
         Conv2D(8, (3, 3), activation='relu', input_shape=input_shape),
         BatchNormalization(),
         # 46 46 8
@@ -72,7 +75,7 @@ def cnn_model_4():
 def cnn_model_2():
     classes = 7
     input_shape = (48, 48, 1)
-    m1 = tf.keras.models.Sequential([
+    m1 = keras.models.Sequential([
         Conv2D(8, (3, 3), activation='relu', input_shape=input_shape),
         BatchNormalization(),
         # 46 46 8
