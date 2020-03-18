@@ -18,3 +18,7 @@ The requirements are provided in the Requirements.txt file.
 1.> If you want to create your own model, change models.py to your liking and train the model to generate weights.
 				 
 2.> Run app_run.py and visit "192.168.1.2" on a browser to access the web interface.
+
+# Examples
+
+![alt text](https://github.com/Satwaj-Dhavale/Emotion-Recognition/blob/master/static/output_files/images/6022088b4c0d35db.jpg)
