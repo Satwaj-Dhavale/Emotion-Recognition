@@ -124,4 +124,5 @@ def video_feed():
 
 
 if __name__ == "__main__":
-    app.run(host='192.168.1.2', port=80, debug=True, threaded=True, use_reloader=False)
+    #app.run(host='192.168.1.2', port=80, debug=True, threaded=True, use_reloader=False)
+    app.run()
