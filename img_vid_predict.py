@@ -38,7 +38,8 @@ def annotate_face_predict(frame, face_locations, model, scaled_factor=1):
 
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
         font = cv2.FONT_HERSHEY_DUPLEX
-        pred = prediction(frame[top:bottom, left:right], model)
+        #pred = prediction(frame[top:bottom, left:right], model)
+        pred = float('nan')
         cv2.putText(frame, pred, (left, bottom), font, 1.5, (0, 255, 0), 1)
 
 
