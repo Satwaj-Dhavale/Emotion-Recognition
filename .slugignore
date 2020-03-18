@@ -1,1 +1,5 @@
 /test_data
+*.psd
+*.pdf
+/test
+/spec
