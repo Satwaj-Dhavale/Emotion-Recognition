@@ -14,7 +14,7 @@ class_labels = {0: 'Anger', 1: 'disgust', 2: 'fear', 3: 'Happy', 4: 'Sad', 5: 'S
 # load model and model.predict_class
 def load_model():
     model = cnn_model_2()
-    #model.load_weights('trained_model/v2/model/model_195.h5')
+    model.load_weights('trained_model/v2/model/model_195.h5')
     return model
 
 
@@ -23,9 +23,9 @@ def prediction(image, model):
     img = cv2.resize(image, (48, 48))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img = np.reshape(gray, (1, 48, 48, 1))
-    #predictions = model.predict_classes(img)
-    #print('Predictions:', class_labels[predictions[0]])
-    #return class_labels[predictions[0]]
+    predictions = model.predict_classes(img)
+    print('Predictions:', class_labels[predictions[0]])
+    return class_labels[predictions[0]]
 
 
 def annotate_face_predict(frame, face_locations, model, scaled_factor=1):
@@ -38,8 +38,7 @@ def annotate_face_predict(frame, face_locations, model, scaled_factor=1):
 
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
         font = cv2.FONT_HERSHEY_DUPLEX
-        #pred = prediction(frame[top:bottom, left:right], model)
-        pred = float('nan')
+        pred = prediction(frame[top:bottom, left:right], model)
         cv2.putText(frame, pred, (left, bottom), font, 1.5, (0, 255, 0), 1)
 
 
