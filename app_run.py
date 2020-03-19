@@ -23,6 +23,7 @@ app.config['DROPZONE_ALLOWED_FILE_TYPE'] = '.jpg, .jpeg, .png, .mp4'
 app.config['DROPZONE_UPLOAD_MULTIPLE'] = 'results'
 app.config['DROPZONE_MAX_FILE_SIZE'] = 100
 app.config['DROPZONE_MAX_FILE'] = 50
+app.config["DROPZONE_TIMEOUT"] = 20000
 
 dropzone = Dropzone(app)
 
@@ -89,15 +90,15 @@ def delete_content(folder):  # Every experience to be new
 
 @app.route("/results")
 def results():
-    delete_content(images_output_folder_path)
+    #delete_content(images_output_folder_path)
     image_names = os.listdir(images_input_folder_path)
     image_predict(image_names, images_input_folder_path, images_output_folder_path)
-    delete_content(images_input_folder_path)
+    #delete_content(images_input_folder_path)
 
-    delete_content(videos_output_folder_path)
+    #delete_content(videos_output_folder_path)
     video_names = os.listdir(videos_input_folder_path)
     video_predict(video_names, videos_input_folder_path, videos_output_folder_path)
-    delete_content(videos_input_folder_path)
+    #delete_content(videos_input_folder_path)
 
     out_image_names = os.listdir(images_output_folder_path)
     out_video_names = os.listdir(videos_output_folder_path)
