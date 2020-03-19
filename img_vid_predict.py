@@ -14,7 +14,7 @@ class_labels = {0: 'Anger', 1: 'disgust', 2: 'fear', 3: 'Happy', 4: 'Sad', 5: 'S
 # load model and model.predict_class
 def load_model():
     model = cnn_model_2()
-    model.load_weights('trained_model/v2/model/model_195.h5')
+    model.load_weights('model_195.h5')
     return model
 
 
