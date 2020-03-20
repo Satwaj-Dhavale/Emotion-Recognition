@@ -93,12 +93,12 @@ def results():
     #delete_content(images_output_folder_path)
     image_names = os.listdir(images_input_folder_path)
     image_predict(image_names, images_input_folder_path, images_output_folder_path)
-    #delete_content(images_input_folder_path)
+    delete_content(images_input_folder_path)
 
     #delete_content(videos_output_folder_path)
     video_names = os.listdir(videos_input_folder_path)
     video_predict(video_names, videos_input_folder_path, videos_output_folder_path)
-    #delete_content(videos_input_folder_path)
+    delete_content(videos_input_folder_path)
 
     out_image_names = os.listdir(images_output_folder_path)
     out_video_names = os.listdir(videos_output_folder_path)
