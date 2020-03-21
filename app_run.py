@@ -23,7 +23,7 @@ app.config['DROPZONE_ALLOWED_FILE_TYPE'] = '.jpg, .jpeg, .png, .mp4'
 app.config['DROPZONE_UPLOAD_MULTIPLE'] = 'results'
 app.config['DROPZONE_MAX_FILE_SIZE'] = 100
 app.config['DROPZONE_MAX_FILE'] = 50
-app.config["DROPZONE_TIMEOUT"] = 20000
+app.config["DROPZONE_TIMEOUT"] = 29000
 
 dropzone = Dropzone(app)
 
