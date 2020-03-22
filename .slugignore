@@ -1,3 +1,5 @@
 /test_data
-/static/input_files
-/static/output_files
+/static/input_files/images/
+/static/input_files/videos/
+/static/output_files/images/
+/static/output_files/videos/
