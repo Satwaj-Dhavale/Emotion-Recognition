@@ -1,5 +1,3 @@
 /test_data
-*.psd
-*.pdf
-/test
-/spec
+/static/input_data
+/static/output_data
